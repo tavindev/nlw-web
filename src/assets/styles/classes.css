@@ -1,0 +1,31 @@
+/* Displays */
+.flex {
+  display: flex
+}
+
+.grid {
+  display: grid;
+}
+
+/* Justify */
+.justify-center {
+  justify-content: center
+}
+
+.justify-between {
+  justify-content: space-between
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+/* Aligns */
+.items-center {
+  align-items: center
+}
+
+/* Position */
+.relative {
+  position: relative
+}
