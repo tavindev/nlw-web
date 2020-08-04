@@ -10,3 +10,6 @@ Para alterar ambos os temas, vá em `src/assets/styles/themes.ts` e se divirta.
 Achou seu tema f#da? Manda um pull request, que se for bom mesmo, a gente da merge :D
 
 ![Alt Text](https://imgur.com/MAHmY27.gif)
+
+# TODO
+- Terminar o Dark Them
