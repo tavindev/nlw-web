@@ -2,7 +2,7 @@ import 'styled-components'
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    background: F0F0F7,
+    background: string,
     primary_lighter: string,
     primary_light: string,
     primary: string,
