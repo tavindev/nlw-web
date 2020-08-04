@@ -1,5 +1,8 @@
 import React from 'react'
 
+
+import Switcher from "../../components/Switcher"
+
 import PageHeader from '../../components/PageHeader'
 import TeacherItem from "../../components/TeacherItem"
 
@@ -7,7 +10,8 @@ import './styles.css'
 
 function TeacherList() {
   return (
-    <div id="page-teacher-list" className="container">
+    <div id="page-teacher-list" className="container relative">
+      <Switcher />
       <PageHeader title="Esses são os proffys disponíveis.">
         <form action="" id="search-teachers">
           <div className="input-block ">

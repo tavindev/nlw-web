@@ -17,9 +17,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "types": ["react-native", "styled-components"]
   },
   "include": [
     "src"
+  ],
+  "files": [
+    "./src/assets/styled.d.ts"
   ]
 }

@@ -2,6 +2,8 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
+import Switcher from "../../components/Switcher"
+
 import logoImg from '../../assets/images/logo.svg'
 import landingImg from '../../assets/images/landing.svg'
 
@@ -14,6 +16,7 @@ import './styles.css'
 function Landing() {
   return (
     <div id="page-landing" className="flex justify-center items-center">
+      <Switcher />
       <div id="page-landing-content" className="container">
         <div className="logo-container">
           <img src={logoImg} alt="logo"/>
