@@ -40,8 +40,9 @@ function Landing() {
           </Link>
         </div>
 
-        <span className="total-connections flex justify-center">
-          Total de x conexões já realizadas <img src={purpleHeartIcon} alt="purple heart"/>
+        <span className="total-connections flex justify-center items-center">
+          Total de x conexões já realizadas.{" "}
+          <img src={purpleHeartIcon} alt="purple heart"/>
         </span>
       </div>
     </div>
