@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { Link } from 'react-router-dom'
 
@@ -11,15 +11,25 @@ import studyIcon from '../../assets/images/icons/study.svg'
 import giveClassesIcon from '../../assets/images/icons/give-classes.svg'
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg'
 
+import api from "../../services/api"
+
 import './styles.css'
 
 function Landing() {
+  const [totalConns, setTotalConns] = useState("0")
+
+  useEffect(() => {
+    api.get('/connections').then(res => {
+      setTotalConns(res.data.total)
+    })
+  }, [])
+
   return (
     <div id="page-landing" className="flex justify-center items-center">
       <Switcher />
       <div id="page-landing-content" className="container">
         <div className="logo-container">
-          <img src={logoImg} alt="logo"/>
+          <img src={logoImg} alt="logo" />
           <h2>Sua plataforma de Estudos online</h2>
         </div>
         <img
@@ -30,19 +40,19 @@ function Landing() {
 
         <div className="buttons-container flex justify-center">
           <Link to={"/study"} className="study flex justify-center items-center">
-            <img src={studyIcon} alt="study"/>
+            <img src={studyIcon} alt="study" />
             Estudar
           </Link>
 
           <Link to={"/teach"} className="give-classes flex justify-center items-center">
-            <img src={giveClassesIcon} alt="give classes"/>
+            <img src={giveClassesIcon} alt="give classes" />
             Dar Aulas
           </Link>
         </div>
 
         <span className="total-connections flex justify-center items-center">
-          Total de x conexões já realizadas.{" "}
-          <img src={purpleHeartIcon} alt="purple heart"/>
+          Total de {totalConns} conexões já realizadas.{" "}
+          <img src={purpleHeartIcon} alt="purple heart" />
         </span>
       </div>
     </div>
